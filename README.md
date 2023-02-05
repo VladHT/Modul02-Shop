@@ -1,2 +1,2 @@
-# Magaz
+# Modul02-Shop
  

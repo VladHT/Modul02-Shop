@@ -1,0 +1,67 @@
+$text: #27300f;
+$orange_text: #d26a22;
+
+.header{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    &__nav{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    gap: 48px;
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 16px;
+        color: $text;
+        opacity: 0.9;
+        text-decoration:none;
+        transition: 0.3s;
+        &_active{
+            color: $orange_text;
+        }
+        &:hover {
+            color:$orange_text;
+        }
+    }
+    &__cart{
+    background-image: url(../images/cart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    }
+    &__tel{
+        color: $text;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1.79px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            color:$orange_text;
+        }
+    }
+    &__counter{
+        color: white;
+        font-size: 8px;
+        position: absolute;
+        top: 6px;
+        right: 10px;
+    }
+}
+.logo{
+background-image: url(../images/logo.svg);
+background-repeat: no-repeat;
+background-size: cover;
+width: 120px;
+height: 32px;
+}

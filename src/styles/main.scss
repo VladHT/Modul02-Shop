@@ -1,23 +1,36 @@
-$text: #27300f;
-$orange_text: #d26a22;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green-text: #27300f;
+$orange-text: #d26a22;
+$font-jost:'Jost', sans-serif;
+$font-cormorant:'Cormorant', serif;
+
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    font-family: $font-jost;
+    color: $green-text;
+}
 
 .header{
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     &__nav{
     display: flex;
     list-style: none;
     margin: 0;
     padding-left: 0;
-    gap: 48px;
+    gap: 4.8rem;
     }
     &__link{
         font-weight: 400;
-        font-size: 16px;
-        color: $text;
+        color: $green-text;
         opacity: 0.9;
         text-decoration:none;
         transition: 0.3s;
@@ -32,16 +45,20 @@ $orange_text: #d26a22;
     background-image: url(../images/cart.svg);
     background-repeat: no-repeat;
     background-position: center;
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     border: none;
     border-radius: 100%;
     cursor: pointer;
     position: relative;
+    background-color: $orange-text;
+    transition: 0.2s;
+    &:hover{
+        background-color: $green-text;
+    }
     }
     &__tel{
-        color: $text;
-        font-size: 16px;
+        color: $green-text;
         font-weight: 500;
         letter-spacing: 1.79px;
         text-transform: uppercase;
@@ -52,16 +69,64 @@ $orange_text: #d26a22;
     }
     &__counter{
         color: white;
-        font-size: 8px;
+        font-size: .8rem;
         position: absolute;
-        top: 6px;
-        right: 10px;
+        top: .6rem;
+        right: 1rem;
     }
 }
 .logo{
 background-image: url(../images/logo.svg);
 background-repeat: no-repeat;
 background-size: cover;
-width: 120px;
-height: 32px;
+width: 12rem;
+height: 3.2rem;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 4rem 15px;
+}
+.main{
+    background-image: url(../images/_background_1_screen.png);
+    background-size: cover;
+    background-position-x: center;
+    &__item{
+        margin-left: 12rem;
+        max-width: 378px;
+        margin-top: 6rem;
+    }
+    &__link{
+        margin-top: 6rem;
+    }
+}
+.title{
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    margin: 0;
+    &__span{
+        font-style: italic;
+    }
+    &_block{
+        .title__span{
+            display: block;
+        }
+    }
+}
+.description{
+    margin: 0;
+    &_size_s{
+        font-size: 1.8rem;
+    }
+}
+.link{
+    color: white;
+    text-transform: uppercase;
+    padding: 2.5rem 4.2rem;
+    background-color: $orange-text;
+    box-shadow: 0 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    border-radius: 3.8rem;
+    text-decoration: none;
+    display: inline-block;
 }

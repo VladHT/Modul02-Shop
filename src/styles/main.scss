@@ -19,7 +19,7 @@ body{
     margin: 0 auto;
     padding: 4rem 15px 0 15px;
     display: flex;
-    justify-content: space-between;
+    gap: 11.9rem;
     align-items: center;
     &__nav{
     display: flex;
@@ -97,25 +97,29 @@ height: 3.2rem;
         margin-top: 6rem;
     }
     &__link{
-        margin-top: 6rem;
+        margin-top: 5.1rem;
     }
 }
 .title{
     font-family: $font-cormorant;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 8rem;
     margin: 0;
-    &__span{
-        font-style: italic;
-    }
+    margin-top: 19.6rem;
+    line-height: 8rem;
     &_block{
         .title__span{
             display: block;
         }
     }
+    &__point{
+        font-style: italic;
+    }
 }
 .description{
     margin: 0;
+    margin-top: 6.2rem;
+    line-height: 2.7rem;
     &_size_s{
         font-size: 1.8rem;
     }
@@ -123,10 +127,15 @@ height: 3.2rem;
 .link{
     color: white;
     text-transform: uppercase;
-    padding: 2.5rem 4.2rem;
+    padding: 2.6rem 4.2rem 2.2rem 4.3rem;
+    letter-spacing: 0.13rem;
     background-color: $orange-text;
     box-shadow: 0 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     border-radius: 3.8rem;
     text-decoration: none;
     display: inline-block;
+    transition: .2s;
+    &:hover{
+        background-color: $green-text;
+    }
 }

@@ -49,6 +49,7 @@ body{
     height: 4rem;
     border: none;
     border-radius: 100%;
+    margin-left: 7.76rem;
     cursor: pointer;
     position: relative;
     background-color: $orange-text;
@@ -60,9 +61,10 @@ body{
     &__tel{
         color: $green-text;
         font-weight: 500;
-        letter-spacing: 1.79px;
+        letter-spacing: 1.3px;
         text-transform: uppercase;
         text-decoration: none;
+        margin-left: 12.7rem;
         &:hover {
             color:$orange_text;
         }
@@ -73,6 +75,10 @@ body{
         position: absolute;
         top: .6rem;
         right: 1rem;
+    }
+    &__TelAndCart{
+        display: flex;
+        align-items: center;
     }
 }
 .logo{

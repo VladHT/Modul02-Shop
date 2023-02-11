@@ -93,6 +93,14 @@ height: 3.2rem;
     background-size: cover;
     background-position-x: center;
     position: relative;
+    z-index: 0;
+    &_images{
+        z-index: -1;
+    }
+    &__plate{
+        box-shadow: 20px 40px 68px rgba($color: $green-text, $alpha: .4);
+        border-radius: 100%;
+    }
     &__item{
         margin-left: 12rem;
         max-width: 378px;

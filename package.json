@@ -18,7 +18,8 @@
   "dependencies": {
     "html-webpack-plugin": "^5.5.0",
     "normalize": "^0.3.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^9.0.4"
   },
   "description": "",
   "version": "1.0.0",

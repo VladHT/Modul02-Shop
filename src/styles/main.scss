@@ -12,6 +12,7 @@ body{
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green-text;
+    overflow-x: hidden;
 }
 
 .header{
@@ -503,6 +504,7 @@ height: 3.2rem;
         right: 5px;
         opacity: 0.4;
         width: calc(var(--swiper-navigation-size)/ 21 * 1);
+        transition: 0.5s;
         &:hover{
             opacity: 1;
         }

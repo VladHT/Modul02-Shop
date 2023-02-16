@@ -607,11 +607,17 @@ height: 3.2rem;
     .swiper{
         overflow: initial;
         &-slide{
-            height: 681px;
-            max-width: 466px;
+            height: 678px;
+            max-width: 462px;
+            padding: 2px;
             border: 1px solid rgba($green-text, .4);
             border-radius: 2rem;
             cursor: pointer;
+            transition: 0s;
+            &:hover{
+                border: 3px solid rgba($green-text, .4);
+                padding: 0;
+            }    
             &:first-child{
                 position: relative;
                 &::before{
@@ -777,10 +783,15 @@ height: 3.2rem;
                 margin-top: 8px;
                 margin-right: 40px;
                 letter-spacing: 1.32px;
+                transition: 0.3s;
+                &:hover{
+                    background-color: $green-text;
+                }
             }
             &__flex{
                 display: flex;
                 justify-content: space-between;
+                position: relative;
             }
             &__price{
                 font-size: 24px;
@@ -802,30 +813,40 @@ height: 3.2rem;
                 width: 5rem;
                 height: 5rem;
                 position: absolute;
-                left: 137px;
-                bottom: 45px;
+                left: 136px;
+                bottom: 8px;
                 border-radius: 100%;
                 background-image: url(../images/plus.svg);
                 background-color: transparent;
                 background-repeat: no-repeat;
                 background-position: center;
-                border: 1px solid rgba($green-text, .4);
+                opacity: 0.4;
+                border: 1px solid $green-text;
                 cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    opacity: 1;
+                }
             }
             &__minus{
                 content: "";
                 width: 5rem;
                 height: 5rem;
                 position: absolute;
-                left: 39px;
-                bottom: 45px;
+                left: 38px;
+                bottom: 8px;
                 border-radius: 100%;
                 background-image: url(../images/minus.svg);
                 background-color: transparent;
                 background-repeat: no-repeat;
                 background-position: center;
-                border: 1px solid rgba($green-text, .4);
+                opacity: 0.4;
+                border: 1px solid $green-text;
                 cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    opacity: 1;
+                }
             }
         }
         &-pagination{

@@ -705,10 +705,16 @@ height: 3.2rem;
             &__count{
                 font-size: 24px;
                 font-weight: 400;
-                color: $green-text;
+                max-width: 2.7rem;
+                text-align: center;
+                border: none;
+                color: #27300f;
                 position: relative;
                 top: 29px;
-                left: 110px;
+                left: 9.8rem;
+                &:focus{
+                    border: none;
+                }
             }
             &__plus{
                 content: "";

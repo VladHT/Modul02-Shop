@@ -5,6 +5,11 @@ $orange-text: #d26a22;
 $font-jost:'Jost', sans-serif;
 $font-cormorant:'Cormorant', serif;
 
+@keyframes moving {
+    100% {transform: rotate(-360deg);}
+}
+
+
 html{
     font-size: 10px;
 }
@@ -164,18 +169,22 @@ height: 3.2rem;
             transition: 0.3s;
         }
         &_1{    
-            top: 45px;
+            top: -30px;
             line-height: 2.4rem;
-            left: 64px;
+            animation: moving 100s infinite linear;
+            transform-origin: 106px 412px;
+            left: 274px;
             &::before{
                 top: 25px;
                 right: -35px;
             }
         }
         &_2{
-            top: 193px;
+            top: 344px;
             line-height: 2.4rem;
-            right: 2px;
+            right: -42px;
+            animation: moving 100s infinite linear;
+            transform-origin: -350px 40px;
             &::before{
                 bottom: 17px;
                 right: 89px;
@@ -183,8 +192,10 @@ height: 3.2rem;
         }
         &_3{
             line-height: 2.4rem;
-            bottom: -50px;
-            left: 462px;
+            bottom: -63px;
+            left: 374px;
+            animation: moving 100s infinite linear;
+            transform-origin: 7px -396px;
             &::before{
                 top: -21px;
                 left: 13px;

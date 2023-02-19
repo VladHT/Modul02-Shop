@@ -49,13 +49,10 @@ var swiper = new Swiper(".offerSwiper", {
   
   counter();
 
-  // Get the container element
 var btnContainer = document.getElementById("myDIV");
 
-// Get all buttons with class="btn" inside the container
 var btns = btnContainer.getElementsByClassName("header__link");
 
-// Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("header__link_active");
@@ -64,13 +61,10 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-// Get the container element
 var btnContainer = document.getElementById("secDIV");
 
-// Get all buttons with class="btn" inside the container
 var btns = btnContainer.getElementsByClassName("catalog__list__items  ");
 
-// Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");

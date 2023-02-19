@@ -800,6 +800,7 @@ transition: 0.3s;
     }
 }
 .catalog{
+    padding-bottom: 1.9rem;
     .offer__text{
         letter-spacing: 0.1rem;
         margin-top: 0;
@@ -1039,6 +1040,8 @@ transition: 0.3s;
             letter-spacing: 1.32px; 
             position: relative;
             cursor: pointer;
+            transition: 0.3s;
+            opacity: 0.6;
             &::before{
                 content: "";
                 position: absolute;
@@ -1049,6 +1052,80 @@ transition: 0.3s;
                 width: 2.5rem;
                 height: 2.5rem;
             }
+            &:hover{
+                opacity: 1;
+            }
         }
+    }
+}
+.Delivery{
+    .title__span{
+        display: inline;
+    }
+    .title__text{
+        padding: 12px 0 0 120px;
+        width: 58.8rem;
+        margin-right: 14.4rem;
+    }
+    &__flex{
+        display: flex;
+    }
+    &__payment{
+        width: 47rem;
+        margin-top: 5.7rem;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: $green-text;
+        position: relative;
+        &__link{
+            color: $orange-text;
+        }
+        &__mastercard{
+            width: 53px;
+            height: 32px;
+            background-image: url(../images/mastercard.png);
+            position: absolute;
+            bottom: 5px;
+            left: 1px;
+            opacity: 0.4;
+            transition: 0.3s;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        &__visa{
+            width: 74px;
+            height: 23px;
+            bottom: 11px;
+            left: 84px;
+            background-image: url(../images/visa.png);
+            position: absolute;
+            opacity: 0.4;
+            transition: 0.3s;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        &__paypal{
+            width: 87px;
+            opacity: 0.4;
+            bottom: 9px;
+            left: 188px;
+            background-image: url(../images/paypal.png);
+            position: absolute;
+            height: 24px;
+            transition: 0.3s;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    &__description{
+        margin-top: 28px;
+    }
+    &__link{
+        text-decoration: underline;
+        color: $green-text;
     }
 }

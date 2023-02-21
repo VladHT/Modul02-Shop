@@ -1262,6 +1262,17 @@ transition: 0.3s;
 .footer{
     border-top: 1px solid rgba($green-text, .4);
     padding-bottom: 5rem;
+    &__linkme{
+        display: flex;
+        margin-top: 33px;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0.6;
+        &__link{
+            text-decoration: none;
+            color: $green-text;
+        }
+    }
     .logo{
         width: 179px;
         height: 48px;

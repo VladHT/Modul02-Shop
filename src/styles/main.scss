@@ -1274,10 +1274,13 @@ transition: 0.3s;
         }
     }
     .logo{
-        width: 17.9rem;
+        width: 17.8rem;
         height: 4.8rem;
         margin-top: 0.6rem;
-        background-size: cover;
+        background-size: 17.6rem 4.6rem;
+        &:hover{
+            background-size: 17.8rem 4.8rem;
+        }
     }
     .header{
         justify-content: space-between;

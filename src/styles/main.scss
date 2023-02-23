@@ -519,7 +519,7 @@ transition: 0.3s;
         top: -5.9rem;
         right: 0.5rem;
         opacity: 0.4;
-        width: calc(var(--swiper-navigation-size)/ 21 * 1);
+        max-width: calc(var(--swiper-navigation-size)/ 21 * 1);
         transition: 0.5s;
         &:hover{
             opacity: 1;
@@ -541,7 +541,7 @@ transition: 0.3s;
     padding-bottom: 11.7rem;
     letter-spacing: .08rem;
     .description{
-        width: 57.9rem;
+        max-width: 57.9rem;
         padding: 3.1rem 0 0 11.4rem;
         line-height: 2.7rem;
         letter-spacing: normal;
@@ -783,7 +783,7 @@ transition: 0.3s;
             top: -6.2rem;
             right: 0.4rem;
             opacity: 0.4;
-            width: calc(var(--swiper-navigation-size)/ 21 * 1);
+            max-width: calc(var(--swiper-navigation-size)/ 21 * 1);
             transition: 0.5s;
             &:hover{
                 opacity: 1;
@@ -1049,7 +1049,7 @@ transition: 0.3s;
                 background-color: transparent;
                 top: -0.3rem;
                 left: 1.1rem;
-                width: 2.5rem;
+                max-width: 2.5rem;
                 height: 2.5rem;
             }
             &:hover{
@@ -1065,14 +1065,14 @@ transition: 0.3s;
     }
     .title__text{
         padding: 1.2rem 0 0 12rem;
-        width: 58.8rem;
+        max-width: 58.8rem;
         margin-right: 14.4rem;
     }
     &__flex{
         display: flex;
     }
     &__payment{
-        width: 47rem;
+        max-width: 47rem;
         margin-top: 5.7rem;
         font-size: 1.8rem;
         font-weight: 400;
@@ -1134,7 +1134,7 @@ transition: 0.3s;
     padding-bottom: 12rem;
     .title__text{
         margin-left: 12.1rem;
-        width: 40rem;
+        max-width: 40rem;
     }
     &__form{
         border: 1px solid rgba(39, 48, 15, 0.4);
@@ -1402,5 +1402,29 @@ transition: 0.3s;
             }
             }
         }
+    }
+}
+@media (max-width:768px){
+    html{
+        font-size: 7.5px;
+    }
+    .container{
+        max-width: 76.8rem;
+    }
+    .offer .swiper-slide{
+        max-width: 23.33rem;
+    }
+    .catalog .catalog__grid{
+        display: grid;
+        grid-template:
+        "a b"
+        "c d";
+    }
+    .catalog__list li{
+        width: 7.3rem;
+    }
+    .main__flex{
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }

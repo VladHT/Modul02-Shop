@@ -13,6 +13,26 @@ var swiper = new Swiper(".offerSwiper", {
     slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      },
+      1005: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      },
+      1487: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      }
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

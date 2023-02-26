@@ -5,8 +5,25 @@ $orange-text: #d26a22;
 $font-jost:'Jost', sans-serif;
 $font-cormorant:'Cormorant', serif;
 
-@keyframes moving {
+$r_minmob:320px;
+$r_mob_360:360px;
+$r_mob_400:400px;
+$r_mob_500:500px;
+$r_mob_600:600px;
+$r_tab:768px;
+$r_tab_1005:1005px;
+$r_tab_1200:1200px;
+$r_tab_1280:1280px;
+$r_tab_1300:1300px;
+$r_tab_1487:1487px;
+$r_tab_1360:1360px;
+$r_tab_1500:1500px;
+
+@keyframes mov_button {
     100% {transform: rotate(-360deg);}
+}
+@keyframes mov_text {
+    100% {transform: rotate(360deg);}
 }
 
 
@@ -27,12 +44,19 @@ body{
     display: flex;
     gap: 11.8rem;
     align-items: center;
+    @media (max-width:$r_tab_1500) {
+        justify-content: space-between;
+        gap: 0;
+    }
     &__nav{
     display: flex;
     list-style: none;
     margin: 0;
     padding-left: 0;
     gap: 4.8rem;
+    @media (max-width:$r_tab_1005) {
+        display: none;
+    }
     }
     &__link{
         font-weight: 400;
@@ -59,9 +83,22 @@ body{
     cursor: pointer;
     position: relative;
     background-color: $orange-text;
+    opacity: 0.6;
     transition: 0.2s;
+    @media (max-width:$r_tab_1360) {
+        display: block;
+        background-color: white;
+        background-image: url(../images/cart-black.svg);
+        background-size: 20px;
+        border: 1px solid $green-text;
+        margin-left: 0;
+    }
     &:hover{
         background-color: $green-text;
+        @media (max-width:$r_tab_1360) {
+            opacity: 1;
+            background-color: inherit;
+        }
     }
     }
     &__tel{
@@ -71,8 +108,66 @@ body{
         text-transform: uppercase;
         text-decoration: none;
         margin-left: 12.7rem;
+        @media (max-width:$r_tab_1500) {
+            margin-left: 0;
+        }
+        @media (max-width:$r_tab_1360) {
+            display: none;
+        }
         &:hover {
             color:$orange_text;
+        }
+    }
+    &__telephone{
+        display: none;
+        background-image: url(../images/tel.svg);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid $green-text;
+        border-radius: 100%;
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+        opacity: 0.6;
+        transition: 0.2s;
+        @media (max-width:$r_tab_1360) {
+            display: block;
+        }
+        &:hover{
+            background-color: $green-text;
+            @media (max-width:$r_tab_1360) {
+                opacity: 1;
+                background-color: inherit;
+            }
+        }
+    }
+    &__menu{
+        display: none;
+        background-image: url(../images/menu.svg);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid $green-text;
+        border-radius: 100%;
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+        opacity: 0.6;
+        transition: 0.2s;
+        @media (max-width:$r_tab_1005) {
+            display: block;
+        }
+        &:hover{
+            background-color: $green-text;
+            @media (max-width:$r_tab_1360) {
+                opacity: 1;
+                background-color: inherit;
+            }
         }
     }
     &__counter{
@@ -81,10 +176,16 @@ body{
         position: absolute;
         top: .6rem;
         right: 0.7rem;
+        @media (max-width:$r_tab_1360) {
+             color: $green-text;
+            }
     }
     &__TelAndCart{
         display: flex;
         align-items: center;
+        @media (max-width:$r_tab_1360) {
+            gap: 2rem;
+        }
     }
 }
 .logo{
@@ -112,6 +213,7 @@ transition: 0.3s;
     &__plate{
         box-shadow: 3.2rem 4rem 6.3rem -3.1rem rgba(39 48 15 / 65%); 
         border-radius: 100%;
+        width: 93%;
     }
     &__item{
         margin-left: 12rem;
@@ -126,6 +228,9 @@ transition: 0.3s;
         align-items: center;
         justify-content: space-between;
         gap: 18.1rem;
+        @media (max-width:$r_tab_1487) {
+            gap: 0;
+        }
     }
     &__cover{
         display: flex;
@@ -138,6 +243,16 @@ transition: 0.3s;
         border-radius: 100%;
         margin-top: 0.6rem;
         position: relative;
+        @media (max-width:$r_tab_1300) {
+            flex-basis: calc(100% - 452px);
+            border: none;
+        }
+        @media (max-width:$r_tab_1005) {
+            flex-basis: calc(100% - 464px);
+        }
+        &_hide{
+            display: none;
+        }
     }
     &__line{
         border: 1px solid rgba($green-text, .4);
@@ -148,6 +263,10 @@ transition: 0.3s;
         align-items: center;
         width: 65.5rem;
         height: 65.5rem;
+        @media (max-width:$r_tab_1300) {
+            border: none;
+            width: 100%;
+        }
     }
     &__btn{
         padding: 0;
@@ -174,22 +293,28 @@ transition: 0.3s;
             transition: 0.3s;
         }
         &_1{    
-            top: -3.0rem;
+            top: -8.0rem;
             line-height: 2.4rem;
-            animation: moving 100s infinite linear;
-            transform-origin: 10.6rem 41.2rem;
-            left: 27.4rem;
+            animation: mov_button 100s infinite linear;
+            transform-origin: 3.6rem 46.2rem;
+            left: 34.4rem;
+            @media (max-width:$r_tab_1300) {
+                display: none;
+            }
             &::before{
-                top: 2.5rem;
-                right: -3.5rem;
+                top: 7.5rem;
+                right: 2.5rem;
             }
         }
         &_2{
             top: 34.4rem;
             line-height: 2.4rem;
             right: -4.2rem;
-            animation: moving 100s infinite linear;
+            animation: mov_button 100s infinite linear;
             transform-origin: -35rem 4rem;
+            @media (max-width:$r_tab_1300) {
+                display: none;
+            }
             &::before{
                 bottom: 1.7rem;
                 right: 8.9rem;
@@ -197,19 +322,23 @@ transition: 0.3s;
         }
         &_3{
             line-height: 2.4rem;
-            bottom: -6.3rem;
+            bottom: -7rem;
             left: 37.4rem;
-            animation: moving 100s infinite linear;
-            transform-origin: 0.7rem -39.6rem;
+            animation: mov_button 100s infinite linear;
+            transform-origin: 0.7rem -40.4rem;
+            @media (max-width:$r_tab_1300) {
+                display: none;
+            }
             &::before{
-                top: -2.1rem;
-                left: 1.3rem;
+                top: -2.8rem;
+                left: 1.7rem;
             }
         }
     }
     &__food{
         display: block;
         color: rgba($green-text, .8);
+        animation: mov_text 100s infinite linear;
     }
     &__tomato{
         position: absolute;
@@ -241,6 +370,9 @@ transition: 0.3s;
     max-width: 144rem;
     margin: 0 auto;
     padding: 4rem 1.5rem;
+    @media (max-width:$r_tab_1200) {
+        text-align: center;
+    }
 }
 .title{
     font-family: $font-cormorant;
@@ -307,6 +439,12 @@ transition: 0.3s;
         height: 51.5rem;
         max-width: 46.2rem;
         cursor: pointer;
+        @media (max-width:$r_tab_1487) {
+            max-width: 48.4%;
+        }
+        @media (max-width:$r_tab_1005) {
+            max-width: 98%;
+        }
         &:first-child{
             position: relative;
             &::after{
@@ -545,11 +683,21 @@ transition: 0.3s;
         padding: 3.1rem 0 0 11.4rem;
         line-height: 2.7rem;
         letter-spacing: normal;
+        @media (max-width:$r_tab_1200) {
+            padding-left: 0px;
+        }
     }
     .main__flex{
         gap: 27.3rem;
         align-items: flex-end;
         justify-content: inherit;
+        @media (max-width:$r_tab_1487) {
+            gap: 0;
+        }
+        @media (max-width:$r_tab_1200) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__links{
         display: flex;
@@ -558,6 +706,9 @@ transition: 0.3s;
         margin: 0;
         margin-bottom: -0.3rem;
         padding: 0;
+        @media (max-width:$r_tab_1200) {
+            padding-top: 13rem;
+        }
         li{
             &:last-child{
             margin-left: 1.6rem;
@@ -632,6 +783,12 @@ transition: 0.3s;
             cursor: pointer;
             transition: 0s;
             overflow: hidden;
+            @media (max-width:$r_tab_1487) {
+                max-width: 48.4%;
+            }
+            @media (max-width:$r_tab_1005) {
+                max-width: 98%;
+            }
             &:nth-child(2){
                 img{
                     padding: 6.1rem 0 1.7rem 5.5rem;
@@ -838,6 +995,17 @@ transition: 0.3s;
             display: grid;
             grid-template: "a b c d""e f g h";
             gap: 2rem;
+            @media (max-width:$r_tab_1487) {
+                grid-template:
+                                "a b c"
+                                "d e f"
+                                "g h i";
+            }
+            @media (max-width:$r_tab_1200) {
+                grid-template:
+                                "a b"
+                                "c d";
+            }
         }
         &__list{
             padding-bottom: 3.3rem;
@@ -1067,9 +1235,28 @@ transition: 0.3s;
         padding: 1.2rem 0 0 12rem;
         max-width: 58.8rem;
         margin-right: 14.4rem;
+        @media (max-width:$r_tab_1005) {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .header__nav{
+        @media (max-width:$r_tab_1005) {
+            display: block;
+        }
+    }
+    .info__text{
+        @media (max-width:$r_tab_1005) {
+            margin: 0 auto;
+            text-align: center;
+        }
     }
     &__flex{
         display: flex;
+        @media (max-width:$r_tab_1005) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__payment{
         max-width: 47rem;
@@ -1091,6 +1278,10 @@ transition: 0.3s;
             left: 0.1rem;
             opacity: 0.4;
             transition: 0.3s;
+            @media (max-width:$r_tab_1005) {
+                bottom: -2.5rem;
+                left: 10.1rem;
+            }
             &:hover{
                 opacity: 1;
             }
@@ -1104,6 +1295,10 @@ transition: 0.3s;
             position: absolute;
             opacity: 0.4;
             transition: 0.3s;
+            @media (max-width:$r_tab_1005) {
+                bottom: -1.9rem;
+                left: 19.4rem;
+            }
             &:hover{
                 opacity: 1;
             }
@@ -1117,6 +1312,10 @@ transition: 0.3s;
             position: absolute;
             height: 2.4rem;
             transition: 0.3s;
+            @media (max-width:$r_tab_1005) {
+                bottom: -2.1rem;
+                left: 29.8rem;
+            }
             &:hover{
                 opacity: 1;
             }
@@ -1135,6 +1334,16 @@ transition: 0.3s;
     .title__text{
         margin-left: 12.1rem;
         max-width: 40rem;
+        @media (max-width:$r_tab_1200) {
+            margin: 0;
+        }
+    }
+    .main__flex{
+        @media (max-width:$r_tab_1200) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
     &__form{
         border: 1px solid rgba(39, 48, 15, 0.4);
@@ -1146,6 +1355,10 @@ transition: 0.3s;
         margin-top: 1.7rem;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width:$r_tab_1200) {
+            align-items: center;
+            text-align: center;
+        }
         &__title{
             font-size: 3rem;
             font-weight: 700;
@@ -1153,6 +1366,9 @@ transition: 0.3s;
             padding-top: 0.8rem;
             margin-bottom: 0.1rem;
             margin-left: 5.9rem;
+            @media (max-width:$r_tab_1200) {
+                margin-left: 0;
+            }
         }
         &__hint{
             font-size: 1.2rem;
@@ -1160,6 +1376,9 @@ transition: 0.3s;
             margin-top: 3rem;
             margin-bottom: 0.8rem;
             margin-left: 6.4rem;
+            @media (max-width:$r_tab_1200) {
+                margin-left: 0;
+            }
         }
         &__text{
             font-size: 1.2rem;
@@ -1186,6 +1405,9 @@ transition: 0.3s;
             border-radius: 2rem;
             margin-left: 5.7rem;
             padding: 2.5rem 27.9rem 2.1rem 3.1rem;
+            @media (max-width:$r_tab_1200) {
+                margin-left: 0;
+            }
         }
         &__button{
             box-shadow: 0 1rem 1.2rem 0.1rem rgb(207 92 13 / 20%);
@@ -1202,6 +1424,9 @@ transition: 0.3s;
             text-transform: uppercase;
             border: none;
             transition: 0.3s;
+            @media (max-width:$r_tab_1200) {
+                margin-left: 0;
+            }
             &:hover{
                 background-color: $green-text;
             }
@@ -1209,12 +1434,18 @@ transition: 0.3s;
     }
     &__text{
         margin-top: -4rem;
+        @media (max-width:$r_tab_1200) {
+            margin-left: 0;
+        }
     }
     &__links{
         display: flex;
         flex-direction: column;
         padding: 5.9rem 0 0 18rem;
         gap: 1.9rem;
+        @media (max-width:$r_tab_1200) {
+            padding: 5rem 0;
+        }
         &__tel{
             font-size: 2.4rem;
             font-weight: 500;
@@ -1268,6 +1499,9 @@ transition: 0.3s;
         align-items: center;
         justify-content: space-between;
         opacity: 0.6;
+        @media (max-width:$r_tab_1200) {
+            flex-direction: column;
+        }
         &__link{
             text-decoration: none;
             color: $green-text;
@@ -1287,6 +1521,11 @@ transition: 0.3s;
         gap: 0;
         padding-top: 8rem;
         align-items: inherit;
+        @media (max-width:$r_tab_1487) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
         &__flex__basis{
             flex-basis: 30%;
         }
@@ -1337,6 +1576,10 @@ transition: 0.3s;
                 left: 7.6rem;
                 bottom: -2.9rem;
                 transition: 0.3s;
+                @media (max-width:$r_tab_1487) {
+                    left: 0.6rem;
+                    bottom: -5.9rem;
+                }
                 &:hover{
                     opacity: 1;
                 }
@@ -1355,6 +1598,10 @@ transition: 0.3s;
                 border: 1px solid #27300f;
                 padding: 1.5rem 1.4rem;
                 transition: 0.3s;
+                @media (max-width:$r_tab_1487) {     
+                        bottom: -6rem;
+                        left: 8.7rem;
+                }
                 &:hover{
                     opacity: 1;
                 }
@@ -1373,6 +1620,10 @@ transition: 0.3s;
                 bottom: -3rem;
                 right: 0.3rem;
                 transition: 0.3s;
+                @media (max-width:$r_tab_1487) {
+                    left: 16.6rem;
+                    bottom: -5.9rem;
+                }
                 &:hover{
                     opacity: 1;
                 }
@@ -1384,6 +1635,13 @@ transition: 0.3s;
             font-size: 1.8rem;
             margin-left: 27rem;
             font-weight: 400;
+            @media (max-width:$r_tab_1487) {
+                display: block;
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                padding: 2rem 0;
+            }
         }
         &__info{
             flex-basis: 30%;
@@ -1395,6 +1653,10 @@ transition: 0.3s;
             margin: 0;
             padding: 0;
             margin-left: 11.1rem;
+            @media (max-width:$r_tab_1487) {
+                margin: 0;
+                padding: 2rem 0;
+            }
             .header__link{
                 &:hover{
                     color: $green-text;
@@ -1402,29 +1664,5 @@ transition: 0.3s;
             }
             }
         }
-    }
-}
-@media (max-width:768px){
-    html{
-        font-size: 7.5px;
-    }
-    .container{
-        max-width: 76.8rem;
-    }
-    .offer .swiper-slide{
-        max-width: 23.33rem;
-    }
-    .catalog .catalog__grid{
-        display: grid;
-        grid-template:
-        "a b"
-        "c d";
-    }
-    .catalog__list li{
-        width: 7.3rem;
-    }
-    .main__flex{
-        flex-direction: column;
-        gap: 1.5rem;
     }
 }

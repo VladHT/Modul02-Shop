@@ -219,6 +219,10 @@ transition: 0.3s;
         margin-left: 12rem;
         max-width: 37.8rem;
         margin-top: 6rem;
+        @media (max-width:$r_tab_1005) {
+            margin: 0 auto;
+            text-align: center;
+        }
     }
     &__link{
         margin-top: 5.3rem;
@@ -248,10 +252,13 @@ transition: 0.3s;
             border: none;
         }
         @media (max-width:$r_tab_1005) {
-            flex-basis: calc(100% - 464px);
+            display: none;
         }
         &_hide{
             display: none;
+            @media (max-width:$r_tab_1005) {
+                display: block;
+            }
         }
     }
     &__line{
@@ -266,6 +273,16 @@ transition: 0.3s;
         @media (max-width:$r_tab_1300) {
             border: none;
             width: 100%;
+        }
+        @media (max-width:$r_tab_1005) {
+            height: inherit;
+            margin-top: 4rem;
+        }
+    }
+    &__text{
+        @media (max-width:$r_tab_1005) {
+            margin: 0 auto;
+            text-align: center;
         }
     }
     &__btn{

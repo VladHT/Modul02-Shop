@@ -979,6 +979,7 @@ transition: 0.3s;
             border: 1px solid $green-text;
             padding: 2.6rem 3rem 2.2rem 3.5rem;
             border-radius: 3.5rem;
+            cursor: pointer;
             &:hover{
                 border-color: $orange-text;
                 color: $orange-text;

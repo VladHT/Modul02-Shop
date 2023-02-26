@@ -370,7 +370,7 @@ transition: 0.3s;
     max-width: 144rem;
     margin: 0 auto;
     padding: 4rem 1.5rem;
-    @media (max-width:$r_tab_1200) {
+    @media (max-width:$r_tab) {
         text-align: center;
     }
 }

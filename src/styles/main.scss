@@ -984,6 +984,7 @@ transition: 0.3s;
     }
     &__list{
         display: flex;
+        overflow-y: scroll;
         gap: 2rem;
         padding: 0;
         margin-top: 8.5rem;
@@ -1030,7 +1031,7 @@ transition: 0.3s;
         }
         &__item{
             height: 50.9rem;
-            width: 33.9rem;
+            max-width: 37.9rem;
             padding: 0.2rem;
             border: 1px solid rgba($green-text, .4);
             border-radius: 2rem;

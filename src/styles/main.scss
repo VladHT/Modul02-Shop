@@ -653,6 +653,9 @@ transition: 0.3s;
                 display: inline-block;
                 opacity: 0.7;
                 margin-top: -1.4rem;
+                @media (max-width:$r_tab_1005) {
+                    display: none;
+                }
             }
             .swiper-slide__link{
                 display: inline-block;
@@ -664,6 +667,9 @@ transition: 0.3s;
             .swiper-slide__title{
                 margin-top: 21rem;
                 padding-left: 3.8rem;
+                @media (max-width:$r_tab_1005) {
+                    margin-top: 35rem;
+                }
             }
             &::after{
                 opacity: 0.55;
@@ -803,6 +809,11 @@ transition: 0.3s;
             cursor: pointer;
             transition: 0s;
             overflow: hidden;
+            @media (max-width:$r_tab_1005) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             @media (max-width:$r_tab_1487) {
                 max-width: 48.4%;
             }
@@ -882,6 +893,10 @@ transition: 0.3s;
                 margin-right: 4rem;
                 letter-spacing: 0.132rem;
                 transition: 0.3s;
+                @media (max-width:$r_tab_1005) {
+                    margin-right: 0;
+                    margin-left: 4rem;
+                }
                 &:hover{
                     background-color: $green-text;
                 }
@@ -908,6 +923,9 @@ transition: 0.3s;
                 position: relative;
                 top: 2.9rem;
                 left: 9.8rem;
+                @media (max-width:$r_tab_1005) {
+                    display: none;
+                }
                 &:focus{
                     border: none;
                 }
@@ -928,6 +946,9 @@ transition: 0.3s;
                 border: 1px solid $green-text;
                 cursor: pointer;
                 transition: 0.3s;
+                @media (max-width:$r_tab_1005) {
+                    display: none;
+                }
                 &:hover{
                     opacity: 1;
                 }
@@ -948,6 +969,9 @@ transition: 0.3s;
                 border: 1px solid $green-text;
                 cursor: pointer;
                 transition: 0.3s;
+                @media (max-width:$r_tab_1005) {
+                    display: none;
+                }
                 &:hover{
                     opacity: 1;
                 }
@@ -989,6 +1013,7 @@ transition: 0.3s;
         display: flex;
         overflow-y: scroll;
         gap: 2rem;
+        flex-wrap: wrap;
         padding: 0;
         margin-top: 8.5rem;
         li{

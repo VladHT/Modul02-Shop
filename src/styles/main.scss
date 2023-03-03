@@ -27,6 +27,10 @@ $r_tab_1500:1500px;
 }
 
 
+:root{
+    --swiper-theme-color: #d26a22;
+}
+
 html{
     font-size: 10px;
 }
@@ -83,7 +87,6 @@ body{
     cursor: pointer;
     position: relative;
     background-color: $orange-text;
-    opacity: 0.6;
     transition: 0.2s;
     @media (max-width:$r_tab_1360) {
         display: block;
@@ -91,6 +94,7 @@ body{
         background-image: url(../images/cart-black.svg);
         background-size: 20px;
         border: 1px solid $green-text;
+        opacity: 0.6;
         margin-left: 0;
     }
     &:hover{
@@ -207,6 +211,27 @@ transition: 0.3s;
     background-repeat: no-repeat;
     position: relative;
     z-index: 0;
+    &__dropwindow{
+        position: absolute;
+        border: 1px solid;
+        border-radius: 2rem;
+        background-color: white;
+        animation: mov_text 100s infinite linear;
+        padding: 2rem 9rem 2rem 3rem;
+        visibility: hidden;
+        &__close{
+            position: absolute;
+            background-image: url(../images/close.png);
+            width: 1.2rem;
+            border: none;
+            height: 1.2rem;
+            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+            right: 10px;
+            top: 10px;
+        }
+    }
     &_images{
         z-index: -1;
     }
@@ -380,6 +405,9 @@ transition: 0.3s;
         position: absolute;
         top: -0.1rem;
         left: 65.1rem;
+        @media (max-width:$r_tab) {
+            left: 31.1rem;
+        }
     }
     &__pepper{
         position: absolute;
@@ -682,6 +710,9 @@ transition: 0.3s;
     }
     &-pagination{
         display: none;
+        @media (max-width:$r_tab_1005) {
+            display: block;
+        }
     }
     &-button-next, &-button-prev{
         top: -5.9rem;
@@ -689,6 +720,9 @@ transition: 0.3s;
         opacity: 0.4;
         max-width: calc(var(--swiper-navigation-size)/ 21 * 1);
         transition: 0.5s;
+        @media (max-width:$r_tab_1005) {
+            display: none;
+        }
         &:hover{
             opacity: 1;
         }
@@ -983,6 +1017,9 @@ transition: 0.3s;
         }
         &-pagination{
             display: none;
+            @media (max-width:$r_tab_1005) {
+                display: block;
+            }
         }
         &-button-next, &-button-prev{
             top: -6.2rem;
@@ -990,6 +1027,9 @@ transition: 0.3s;
             opacity: 0.4;
             max-width: calc(var(--swiper-navigation-size)/ 21 * 1);
             transition: 0.5s;
+            @media (max-width:$r_tab_1005) {
+                display: none;
+            }
             &:hover{
                 opacity: 1;
             }
@@ -1287,7 +1327,7 @@ transition: 0.3s;
                 background-color: transparent;
                 top: -0.3rem;
                 left: 1.1rem;
-                max-width: 2.5rem;
+                width: 2.5rem;
                 height: 2.5rem;
             }
             &:hover{

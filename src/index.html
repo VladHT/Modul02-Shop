@@ -62,7 +62,7 @@
                                 <span class="main__food">Картофель<br>169 руб</span> 
                             </button>
                             <button class="main__btn main__btn_3" type="button">
-                                <span class="main__food">Томаты <br>215 руб</span>
+                                <span class="main__food">Томаты<br>215 руб</span>
                             </button>
                         </div>
                         <div class="main__link">
@@ -74,14 +74,35 @@
                     <div class="main__line">
                         <img src="images/image-main.png" alt="Тарелка" class="main__plate">
                     </div>
-                    <button class="main__btn main__btn_1" type="button">
-                        <span class="main__food">Авокадо<br>134 руб</span> 
+                    <button class="main__btn main__btn_1" type="button" onclick="document.getElementById('dropwindow-1').style.visibility = 'visible'">
+                        <span class="main__food">Авокадо<br>134 руб</span>
+                        <div class="main__dropwindow" id="dropwindow-1">
+                            <input type="button" class="main__dropwindow__close" onclick="document.getElementById('dropwindow-1').style.visibility = 'hidden'">
+                            <h2>Авокадо</h2>
+                            <p>Картофель&nbsp;Молодой,
+                                Свежий урожай, 1кг</p>
+                            <span>134 руб/кг</span>
+                        </div> 
                     </button>
-                    <button class="main__btn main__btn_2" type="button">
-                        <span class="main__food">Картофель<br>169 руб</span> 
+                    <button class="main__btn main__btn_2" type="button" onclick="document.getElementById('dropwindow-2').style.visibility = 'visible'">
+                        <span class="main__food">Картофель<br>169 руб</span>
+                        <div class="main__dropwindow" id="dropwindow-2">
+                            <input type="button" class="main__dropwindow__close" onclick="document.getElementById('dropwindow-2').style.visibility = 'hidden'">
+                            <h2>Картофель</h2>
+                            <p>Картофель&nbsp;Молодой,
+                                Свежий урожай, 1кг</p>
+                            <span>169 руб/кг</span>
+                        </div>
                     </button>
-                    <button class="main__btn main__btn_3" type="button">
+                    <button class="main__btn main__btn_3" type="button" onclick="document.getElementById('dropwindow-3').style.visibility = 'visible'">
                         <span class="main__food">Томаты <br>215 руб</span>
+                        <div class="main__dropwindow" id="dropwindow-3">
+                            <input type="button" class="main__dropwindow__close" onclick="document.getElementById('dropwindow-3').style.visibility = 'hidden'">
+                            <h2>Томаты</h2>
+                            <p>Картофель&nbsp;Молодой,
+                                Свежий урожай, 1кг</p>
+                            <span>215 руб/кг</span>
+                        </div>
                     </button>
                 </div>
             </div>

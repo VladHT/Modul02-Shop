@@ -216,7 +216,6 @@ transition: 0.3s;
         border: 1px solid;
         border-radius: 2rem;
         background-color: white;
-        animation: mov_text 100s infinite linear;
         padding: 2rem 9rem 2rem 3rem;
         visibility: hidden;
         &__close{
@@ -1055,7 +1054,6 @@ transition: 0.3s;
     }
     &__list{
         display: flex;
-        overflow-y: scroll;
         gap: 2rem;
         flex-wrap: wrap;
         padding: 0;

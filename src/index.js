@@ -93,4 +93,20 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-// function dropwindow
+// function dropwin
+
+document.getElementById('btn_1').onclick = function() {
+  document.getElementById('dropwindow-1').style.visibility = 'visible';
+  document.getElementById('dropwindow-2').style.visibility = 'hidden';
+  document.getElementById('dropwindow-3').style.visibility = 'hidden';
+}
+document.getElementById('btn_2').onclick = function() {
+  document.getElementById('dropwindow-1').style.visibility = 'hidden';
+  document.getElementById('dropwindow-2').style.visibility = 'visible';
+  document.getElementById('dropwindow-3').style.visibility = 'hidden';
+}
+document.getElementById('btn_3').onclick = function() {
+  document.getElementById('dropwindow-1').style.visibility = 'hidden';
+  document.getElementById('dropwindow-2').style.visibility = 'hidden';
+  document.getElementById('dropwindow-3').style.visibility = 'visible';
+}

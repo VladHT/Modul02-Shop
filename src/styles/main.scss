@@ -22,6 +22,7 @@ $r_tab_1500:1500px;
 @keyframes mov_button {
     100% {transform: rotate(-360deg);}
 }
+
 @keyframes mov_text {
     100% {transform: rotate(360deg);}
 }
@@ -204,6 +205,13 @@ transition: 0.3s;
     background-size: 12.1rem 3.3rem;
 }
 }
+.move{
+    position: absolute;
+    animation: mov_button 100s infinite linear;
+    transform-origin: -22.4rem 14.2rem;
+    right: 156px;
+    top: 300px;
+}
 .main{
     background-image: url(../images/_background_1_screen.png);
     background-size: cover;
@@ -214,13 +222,16 @@ transition: 0.3s;
     &__dropwindow{
         position: absolute;
         border: 1px solid;
+        width: 200px;
         border-radius: 2rem;
+        animation: mov_text 100s infinite linear;
         background-color: white;
-        padding: 2rem 9rem 2rem 3rem;
+        padding: 2rem 3rem 2rem 3rem;
         visibility: hidden;
         &__close{
             position: absolute;
             background-image: url(../images/close.png);
+            background-color: transparent;
             width: 1.2rem;
             border: none;
             height: 1.2rem;

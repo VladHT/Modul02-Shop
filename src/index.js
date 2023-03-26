@@ -110,3 +110,18 @@ document.getElementById('btn_3').onclick = function() {
   document.getElementById('dropwindow-2').style.visibility = 'hidden';
   document.getElementById('dropwindow-3').style.visibility = 'visible';
 }
+
+const links = document.querySelectorAll(".smooth");
+
+       for (const link of links) {
+       link.addEventListener("click", clickHandler);
+       }
+
+       function clickHandler(e) {
+       e.preventDefault();
+       const href = this.getAttribute("href");
+
+       document.querySelector(href).scrollIntoView({
+           behavior: "smooth"
+       });
+       }
